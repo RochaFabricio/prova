@@ -56,11 +56,12 @@ class Cars
         ]);
                 
         $car = json_decode( $response->getBody()->getContents());
-        // dd();
         
         event(new CreateCar($car));
+        
+        return response()->json($car);
+        // return response()->json($c, 200, $headers);
 
-        // return json_decode( $response->getBody()->getContents() );
     }
 
 }

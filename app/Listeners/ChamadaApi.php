@@ -2,9 +2,13 @@
 
 namespace App\Listeners;
 
+use App\Log;
+use Carbon\Carbon;
+
 use App\Events\CreateCar;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
+
 
 class ChamadaApi
 {
@@ -26,6 +30,11 @@ class ChamadaApi
      */
     public function handle(CreateCar $event)
     {
-        dd($event->getCar()->_id);
+
+        $log = new Log();
+        $log->data_hora = Carbon::now('America/Sao_Paulo')->format('Y-m-d H:i:s');
+        $log->car_id = $event->getCar()->_id;
+        $log->save();
+
     }
 }

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\Cars;
-
+use App\Events\CreateCar;
 use Illuminate\Http\Request;
 
 class CarsController extends Controller
@@ -30,7 +30,7 @@ class CarsController extends Controller
     }
 
     public function store(Request $request){
-
+        
         $car = $this->cars->store($request);
 
         return response()->json($car);

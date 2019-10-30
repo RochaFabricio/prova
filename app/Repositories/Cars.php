@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Repositories;
+use App\Events\CreateCar;
+
 
 use GuzzleHttp\Client;
 
@@ -52,8 +54,13 @@ class Cars
                 "age" => $request->age
             ]
         ]);
-    
-        return json_decode( $response->getBody()->getContents() );
+                
+        $car = json_decode( $response->getBody()->getContents());
+        // dd();
+        
+        event(new CreateCar($car));
+
+        // return json_decode( $response->getBody()->getContents() );
     }
 
 }

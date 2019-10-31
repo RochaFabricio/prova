@@ -6,9 +6,11 @@ Após clonar o repositório, execute o comando "composer install", ao termino co
 
 Feito isso execute o comando "php artisan migrate", para que a tabela "log" seja criada.
 
+Execute "php artisan serve" uma possivel resposta será : "Laravel development server started: <http://127.0.0.1:8000>" caso ja esteja utilizando a porta "8000" execute "php artisan serve --port=8001" o qualquer outra porta desejada.
+
 Depois de seguir os passos você poderá utilizar o sistema.
 
-## API REST implementada
+## API REST Implementada
 
 Method  EndPoint  
 GET     api/listCars

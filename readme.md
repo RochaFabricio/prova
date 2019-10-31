@@ -12,8 +12,10 @@ Depois de seguir os passos você poderá utilizar o sistema.
 
 ## API REST Implementada
 
-Method  EndPoint  
-GET     api/listCars
-POST    api/createCar
-GET     api/logs
+Method    | EndPoint
+--------- | ------
+GET       | api/listCars
+POST      | api/createCar
+GET       | api/logs
+
 

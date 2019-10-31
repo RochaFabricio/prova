@@ -15,6 +15,7 @@ Depois de seguir os passos você poderá utilizar o sistema.
 Method    | EndPoint
 --------- | ------
 GET       | api/listCars
+GET       | api/listCars/id
 POST      | api/createCar
 GET       | api/logs
 
